@@ -1,10 +1,10 @@
-package boj.silver;
+package boj.silver.backtracking;
 
-// 실버3 15656 N과 M (7)
+// 실버2 15665 N과 M (11)
 
 import java.util.*;
 
-public class B15656_Backtracking {
+public class B15665_Backtracking {
     static int n, m;
     static int[] arr;
     static int[] numbers;
@@ -12,6 +12,7 @@ public class B15656_Backtracking {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         n = sc.nextInt();
         m = sc.nextInt();
 
@@ -37,6 +38,8 @@ public class B15656_Backtracking {
         }
 
         for (int i = 0; i < n; i++) {
+            if (i > 0 && numbers[i] == numbers[i - 1]) continue;
+
             arr[depth] = numbers[i];
             backtrack(depth + 1);
         }

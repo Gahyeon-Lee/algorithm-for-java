@@ -1,4 +1,4 @@
-package boj.silver;
+package boj.silver.backtracking;
 
 // 실버3 15649 N과 M (1)
 
